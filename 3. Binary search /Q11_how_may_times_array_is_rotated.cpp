@@ -6,24 +6,27 @@ public:
 
     int findmin(vector <int>& arr){
         int low=0, high=arr.size()-1, ans=INT_MAX;
-
+        int index=-1;
 
         while(low<=high){
             int mid = (low+high)/2;
             if(arr[low] <= arr[high]){
                 ans = arr[low];
+                index= low;
                 break;
             }
             if(arr[low]<=arr[mid]){
                 ans=arr[low];
+                index=low;
                 low=mid+1;
             }
             else {
                 ans=arr[mid];
+                index=high;
                 high=mid+1;
             }
         }
-        return ans;
+        return index;
     }
 };
 
@@ -34,6 +37,6 @@ int main(){
     solution sol;
     int result= sol.findmin(arr);
 
-    cout<< "Minimum element is " << result <<endl;
+    cout<< "your array is rotated " << result << " times " << endl;
     return 0;
 }
