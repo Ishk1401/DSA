@@ -4,7 +4,7 @@ using namespace std;
 class solution {
 public:
 
-    int findmin(vector <int>& arr){
+    int findtimes(vector <int>& arr){
         int low=0, high=arr.size()-1, ans=INT_MAX;
         int index=-1;
 
@@ -22,7 +22,7 @@ public:
             }
             else {
                 ans=arr[mid];
-                index=high;
+                index=mid;
                 high=mid+1;
             }
         }
@@ -35,7 +35,7 @@ int main(){
     vector<int> arr = {4,5,6,7,0,1,2};
 
     solution sol;
-    int result= sol.findmin(arr);
+    int result= sol.findtimes(arr);
 
     cout<< "your array is rotated " << result << " times " << endl;
     return 0;
