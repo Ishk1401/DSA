@@ -27,9 +27,9 @@ public:
 
 int main() {
     int n , m;
-    cout << "enter your Nth value" <<endl;
-    cin >> n;
-    cout << "enter your number" <<endl;
+    cout << "enter your Nth value " <<endl;
+    cin >> n; 
+    cout << "enter your number " <<endl;
     cin >> m;
     Solution Sol;
 
